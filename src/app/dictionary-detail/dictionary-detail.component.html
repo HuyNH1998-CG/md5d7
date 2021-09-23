@@ -1,0 +1,18 @@
+<div *ngIf="word; else tmpl">
+  <h1>Word: {{word.english}}</h1>
+  <table>
+    <tr>
+      <th>English</th>
+      <th>Vietnamese</th>
+    </tr>
+    <tr>
+      <td>{{word.english}}</td>
+      <td>{{word.vietnamese}}</td>
+    </tr>
+  </table>
+</div>
+
+<ng-template #tmpl>
+  <h2>None</h2>
+</ng-template>
+

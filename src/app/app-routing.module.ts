@@ -3,6 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {TimelinesComponent} from "./timelines/timelines.component";
 import {YoutubePlaylistComponent} from "./youtube-playlist/youtube-playlist.component";
 import {YoutubePlayerComponent} from "./youtube-player/youtube-player.component";
+import {DictionaryPageComponent} from "./dictionary-page/dictionary-page.component";
+import {DictionaryDetailComponent} from "./dictionary-detail/dictionary-detail.component";
 
 const routes: Routes = [{
   path: 'timelines',
@@ -13,6 +15,13 @@ const routes: Routes = [{
   children:[{
     path:':id',
     component: YoutubePlayerComponent
+  }]
+},{
+  path: 'dict',
+  component: DictionaryPageComponent,
+  children:[{
+    path: ':id',
+    component: DictionaryDetailComponent
   }]
 }];
 
